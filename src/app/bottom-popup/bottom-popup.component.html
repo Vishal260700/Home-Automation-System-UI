@@ -1,0 +1,21 @@
+<div>
+
+    <!-- right side settings -->
+
+    <h1 style="text-align: center;">{{data.deviceType}}</h1>
+    <h4 style="text-align: center;">{{data.deviceName}}</h4>
+
+    <!-- Slide bar -->
+    <mat-slider aria-label="unit(s)"></mat-slider>
+
+    <br>
+
+    <!-- Button on off -->
+    <div *ngIf = "data.deviceType == 'Philips Hue' " style="margin: auto;margin-left: 210px;">
+        <button mat-fab aria-label="On/Off">
+            <mat-icon>settings_power</mat-icon>
+        </button>
+    </div>
+
+
+</div>

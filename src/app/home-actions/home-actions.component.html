@@ -1,0 +1,12 @@
+<mat-card-actions>
+    <mat-grid-list cols="10" rowHeight="100px">
+      <mat-grid-tile
+          *ngFor="let action of actions"
+          [colspan]="action.cols"
+          [rowspan]="action.rows">
+        <button style="color: {{action.pColor}}; background-color: {{action.sColor}};" mat-fab aria-label="Store">
+          <mat-icon>{{action.action}}</mat-icon>
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-actions>

@@ -1,0 +1,9 @@
+
+.device-card{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.device-header-image {
+    background-size: cover;
+}

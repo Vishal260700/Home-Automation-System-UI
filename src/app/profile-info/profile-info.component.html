@@ -1,0 +1,9 @@
+<img mat-card-image [src] = 'dp' alt="Photo of a {{user}}">
+<mat-card-title style="text-align: center;color: white;">{{user}}</mat-card-title>
+  <mat-card-subtitle style="text-align: center;color: white;">
+    Google Home : {{ghome}}
+    <span (click) = "alterHomeStaus()" class="indicator" [ngClass] = "{
+      'red-indicator' : homeStatus == 'unactive',
+      'green-indicator' : homeStatus == 'active'
+    }"></span>
+</mat-card-subtitle>
