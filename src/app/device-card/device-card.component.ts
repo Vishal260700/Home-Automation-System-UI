@@ -22,14 +22,14 @@ export class DeviceCardComponent implements OnInit {
   devices: Device[] = [
     {
     id : '1',
-    deviceName : 'Desk  Light',
+    deviceName : 'Desk  Lamp',
     deviceType : 'Philips Hue',
     deviceIcon : 'lightbulb',
     pColor : '#F4D03F',
     sColor : '#FCF3CF'},
     {
     id : '2',
-    deviceName : 'Bedroom Speaker',
+    deviceName : 'Bed Speaker',
     deviceType : 'Google Nest mini',
     deviceIcon : 'speaker',
     pColor : '#3498DB',

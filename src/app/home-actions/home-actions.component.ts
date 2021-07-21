@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+
+import {ModalPopupComponent} from '../modal-popup/modal-popup.component';
 
 export interface Action {
   pColor: string;
@@ -15,7 +18,7 @@ export interface Action {
 })
 export class HomeActionsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   actions: Action[] = [
     {action: 'lightbulb', cols: 2, rows: 1, sColor: '#FCF3CF', pColor: '#F4D03F' },
@@ -24,6 +27,10 @@ export class HomeActionsComponent implements OnInit {
     {action: 'add_circle_outline', cols: 2, rows: 1, pColor: '#9B59B6', sColor: '#E8DAEF' },
     {action: 'settings', cols: 2, rows: 1, sColor: '#EAECEE', pColor: '#566573' },
   ];
+
+  btnClick(){
+    const dialogRef = this.dialog.open(ModalPopupComponent);
+  }
 
   ngOnInit(): void {}
   

@@ -4,7 +4,7 @@
           *ngFor="let action of actions"
           [colspan]="action.cols"
           [rowspan]="action.rows">
-        <button style="color: {{action.pColor}}; background-color: {{action.sColor}};" mat-fab aria-label="Store">
+        <button (click) = "btnClick()" style="color: {{action.pColor}}; background-color: {{action.sColor}};" mat-fab aria-label="Store">
           <mat-icon>{{action.action}}</mat-icon>
         </button>
       </mat-grid-tile>

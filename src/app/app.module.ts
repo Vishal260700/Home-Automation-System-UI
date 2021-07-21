@@ -22,6 +22,18 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 // slider
 import {MatSliderModule} from '@angular/material/slider';
 
+// Modal
+import {MatDialogModule} from '@angular/material/dialog';
+
+// list
+import {MatListModule} from '@angular/material/list'; 
+
+// web cam
+import {WebcamModule} from 'ngx-webcam';
+
+
+
+
 
 // Components
 import { ProfileCardComponent } from './profile-card/profile-card.component';
@@ -29,6 +41,9 @@ import { DeviceCardComponent } from './device-card/device-card.component';
 import { BottomPopupComponent } from './bottom-popup/bottom-popup.component';
 import { HomeActionsComponent } from './home-actions/home-actions.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
+import { ModalPopupComponent } from './modal-popup/modal-popup.component';
+import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
@@ -38,7 +53,10 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
     DeviceCardComponent,
     BottomPopupComponent,
     HomeActionsComponent,
-    ProfileInfoComponent
+    ProfileInfoComponent,
+    ModalPopupComponent,
+    SubscriptionsComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +66,10 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
     MatButtonModule,
     MatIconModule,
     MatBottomSheetModule,
-    MatSliderModule
+    MatSliderModule,
+    MatDialogModule,
+    MatListModule,
+    WebcamModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,16 @@
-<!-- devices -->
-<div *ngFor = "let device of devices">
 
-    <mat-card class="device-card" (click) = 'openBottomSheet(device.id, device.deviceType, device.deviceName)'>
-        <mat-card-header>
-            <mat-icon mat-card-avatar style="padding: 10px;" [ngStyle] = "{'color' : device.pColor, 'background-color' : device.sColor} " >{{device.deviceIcon}}</mat-icon>
-            <mat-card-title>{{device.deviceName}}</mat-card-title>
-            <mat-card-subtitle>{{device.deviceType}}</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
-
-</div>
+<mat-grid-list cols="2" rowHeight="2:1" gutterSize="5px">
+    <!-- devices -->
+    <div *ngFor = "let device of devices">
+        <mat-grid-tile>
+            <mat-card fxFlexAlign="stretch" class="device-card" (click) = 'openBottomSheet(device.id, device.deviceType, device.deviceName)'>
+                <mat-card-header>
+                    <mat-icon mat-card-avatar style="padding: 5px;" [ngStyle] = "{'color' : device.pColor, 'background-color' : device.sColor} " >{{device.deviceIcon}}</mat-icon>
+                    <mat-card-title style="font-size: 12px;">{{device.deviceName}}</mat-card-title>
+                    <mat-card-subtitle style="font-size: 12px;">{{device.deviceType}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </mat-grid-tile>
+    </div>
+</mat-grid-list>
+  
